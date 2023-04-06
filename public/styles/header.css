@@ -10,6 +10,12 @@ header {
   padding-top: 10rem;
 }
 
+.full-name{
+  font-size: 30px;
+  color: #FFFFFF;
+  padding-bottom: 1em;
+}
+
 .bold {
   font-weight: bold;
 }
