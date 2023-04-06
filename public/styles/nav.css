@@ -1,0 +1,46 @@
+nav {
+  display:flex;
+  background-color: #4056a1;
+  height: 120px;
+  color: #FFFFFF;
+  flex: 0 0 100%;
+  justify-content: space-between;
+}
+
+.nav-left{
+  display:flex;
+  align-items: flex-start;
+  font-family: 'Bungee', sans-serif;
+  margin: 1.5em;
+}
+
+nav .nav-left span{
+  font-size: 50px;
+
+}
+
+.nav-right{
+  display:flex;
+  align-items: center;
+  margin: 1.5em;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-right p {
+  margin-bottom: 0.25em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.light {
+  font-weight: light;
+}
+
+.down-arrow{
+  border: none;
+  background: transparent;
+  color: #FF0000;
+}
