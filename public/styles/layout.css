@@ -21,6 +21,17 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #f4f1ec;
+}
+
+
 nav .logo {
   font-family: 'Bungee', sans-serif;
 }
