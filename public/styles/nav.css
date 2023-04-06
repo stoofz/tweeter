@@ -3,8 +3,9 @@ nav {
   background-color: #4056a1;
   height: 120px;
   color: #FFFFFF;
-  flex: 0 0 100%;
   justify-content: space-between;
+  width: 100%;
+  position: fixed;
 }
 
 .nav-left{
