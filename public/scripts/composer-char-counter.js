@@ -10,9 +10,9 @@ $(document).ready(function() {
     const pageCounter = $('#count-value');
     pageCounter.text(charsLeft);
     if (charsLeft > 0) {
-      pageCounter.css('color', '#545149');
+      pageCounter.css({ color: '#545149' });
     } else {
-      pageCounter.css('color', '#FF0000');
+      pageCounter.css({ color: '#FF0000' });
     }
   });
 });
