@@ -15,10 +15,10 @@ header {
   padding-bottom: 1em;
 }
 
-.bold {
+#first-name {
   font-weight: bold;
 }
 
-.light {
+#last-name {
   font-weight: lighter;
 }
