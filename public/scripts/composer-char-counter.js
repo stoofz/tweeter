@@ -1,14 +1,13 @@
 $(document).ready(function() {
   
-  $('#tweet-text').on('keydown', function(e) {
+  $('#tweet-text').on('keyup', function(e) {
 
-    // Assign counter variable by id
-    const pageCounter = $('#count-value');
-
-    // Adjust count based on key down events
-    const charsLeft = pageCounter.val() - 1;
+    // Adjust count based on key down events subtracted from max characters
+    const charCount = $(this).val().length;
+    const charsLeft = 140 - charCount;
 
     // Update counter on page
+    const pageCounter = $('#count-value');
     pageCounter.text(charsLeft);
     if (charsLeft > 0) {
       pageCounter.css('color', '#545149');
