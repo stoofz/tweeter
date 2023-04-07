@@ -43,7 +43,7 @@ nav .logo {
 
 }
 
-.tweet-label{
+.new-tweet label{
   margin-top: 1em;
   font-weight: bold;
   font-size: 20px;
@@ -71,6 +71,7 @@ nav .logo {
   margin-top: 1em;
   font-family: 'Bungee', sans-serif;
   font-size: 20px;
+  
 }
 
 .tweet-btn{
