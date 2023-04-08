@@ -1,3 +1,6 @@
+/* eslint-env jquery */
+/* global document */
+
 $(document).ready(function() {
   
   $('#tweet-text').on('keyup', function(e) {
@@ -6,7 +9,7 @@ $(document).ready(function() {
     const charCount = $(this).val().length;
     const charsLeft = 140 - charCount;
 
-    // Update counter on page
+    // Update counter on page via ID
     const pageCounter = $('#count-value');
     pageCounter.text(charsLeft);
     if (charsLeft > 0) {
