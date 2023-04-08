@@ -2,7 +2,7 @@ $(document).ready(function() {
   
   $('#tweet-text').on('keyup', function(e) {
 
-    // Adjust count based on key down events subtracted from max characters
+    // Adjust count based on key up events subtracted from max characters
     const charCount = $(this).val().length;
     const charsLeft = 140 - charCount;
 
