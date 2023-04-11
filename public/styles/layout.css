@@ -64,7 +64,6 @@ nav .logo {
   font-size: 18px;
 }
 
-
 .sub-tweet{
   display:flex;
   flex-direction: row;
@@ -131,6 +130,9 @@ article.tweet .tweet-date{
 article.tweet .tweet-reactions{
   color: #4056a1;
   margin-right: 1em;
+  display: flex;
+  justify-content: space-between;
+  width: 4em;
 }
 
 article.tweet #flag:hover{
