@@ -41,7 +41,8 @@
       </div>
     </nav>
     
-    <header>
+    <header class="header-main">
+
       <div class="profile-image">
           <img src="/images/profile-hex.png"> 
       </div>
@@ -52,23 +53,52 @@
             <span id="last-name">Chambers</span>
           </h2>
       </div>
+
     </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <label for="tweet-label">What are you humming about?</label>
+        
+        <h2>Compose Tweet</h2>
         <form class="tweet" action="/tweets" method="POST">
+          <label for="tweet-label">What are you humming about?</label>
           <textarea name="text" id="tweet-text" class="tweet-box"></textarea>
           <div class="sub-tweet">
             <button class="tweet-btn" type="submit">Tweet</button>
             <output name="counter" class="counter" id="count-value" for="tweet-text">140</output>
           </div>
+
         </form>
       </section>
       
+      <section class="timeline">
+        <article class="tweet">
+
+          <header>
+            <div class="user-slug">
+              <i class="fa-sharp fa-regular fa-face-meh"></i>
+              <span class="user-slug-name">Anthony</span>
+            </div>
+            <span class="tweet-author">@TwoThree<span>
+          </header>
+
+          <div class="tweet-message">
+            Tweet tweet tweet
+          </div>
+
+          <footer>
+            <span class="tweet-date">10 days ago</span>
+            <div class="tweet-reactions">
+              <i id="flag" class="fa-solid fa-flag"></i>
+              <i id="retweet" class="fa-solid fa-retweet"></i>
+              <i id="heart" class="fa-solid fa-heart"></i>
+            </div>
+          </footer>
+
+        </article>
+      </section>
 
     </main>
-
   </body>
 </html>
