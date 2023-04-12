@@ -7,30 +7,26 @@
 /* eslint-env jquery */
 /* global document, timeago */
 
+// Build tweet for timeline
 const createTweetElement = function(tweetObj) {
   const article = $("<article class='tweet'>");
   const header = $("<header class='tweet-header'>");
 
   const headerUserSlug = $("<div class='user-slug'>");
-  const userIcon = $('<img>').attr('src', tweetObj.user.avatars);
-  headerUserSlug.append(userIcon);
-
+  
+  const headerIcon = $('<img>').attr('src', tweetObj.user.avatars);
   const headerName = $("<span id='user-slug-name'>");
-  const firstName = tweetObj.user.name;
-  headerName.append(firstName);
-  headerUserSlug.append(headerName);
-
-  header.append(headerUserSlug);
+  headerName.append(tweetObj.user.name);
+  
+  headerUserSlug.append(headerIcon, headerName);
 
   const headerHandle = $("<span id='tweet-author'>");
-  const handle = tweetObj.user.handle;
-  headerHandle.append(handle);
+  headerHandle.append(tweetObj.user.handle);
   
-  header.append(headerHandle);
+  header.append(headerUserSlug, headerHandle);
   
   const tweetContainer = $("<div class='tweet-message'>");
-  const tweetText = tweetObj.content.text;
-  tweetContainer.append(tweetText);
+  tweetContainer.append(tweetObj.content.text);
   
   const footer = $('<footer>');
 
@@ -58,6 +54,7 @@ const renderTweets = function(tweets) {
   }
 };
 
+// Load tweets on success from endpoint
 const loadTweets = function() {
   $.ajax({
     url: '/tweets',
@@ -68,6 +65,7 @@ const loadTweets = function() {
   });
 };
 
+// On form submit, post to endpoint and load tweets on success, clear tweet
 const submitTweet = function(tweet) {
   tweet.submit(function(event) {
     event.preventDefault();
@@ -82,7 +80,7 @@ const submitTweet = function(tweet) {
   });
 };
 
-
+// Runs functions
 $(document).ready(function() {
   loadTweets();
   submitTweet($('#submit-tweet'));
