@@ -59,9 +59,9 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        
+
         <h2>Compose Tweet</h2>
-        <form class="tweet" action="/tweets" method="POST">
+        <form class="tweet" action="/tweets" id="submit-tweet" method="POST">
           <label for="tweet-label">What are you humming about?</label>
           <textarea name="text" id="tweet-text" class="tweet-box"></textarea>
           <div class="sub-tweet">
@@ -72,15 +72,15 @@
         </form>
       </section>
       
-      <section class="timeline">
-        <article class="tweet">
+      <section id="tweet-timeline" class="timeline">
+        <!-- <article class="tweet">
 
-          <header>
+          <header class="tweet-header">
             <div class="user-slug">
               <i class="fa-sharp fa-regular fa-face-meh"></i>
               <span class="user-slug-name">Anthony</span>
             </div>
-            <span class="tweet-author">@TwoThree<span>
+            <span id="tweet-author">@TwoThree<span>
           </header>
 
           <div class="tweet-message">
@@ -96,7 +96,7 @@
             </div>
           </footer>
 
-        </article>
+        </article> -->
       </section>
 
     </main>
