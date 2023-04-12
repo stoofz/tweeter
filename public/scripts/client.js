@@ -5,7 +5,7 @@
  */
 
 /* eslint-env jquery */
-/* global document, timeago */
+/* global document, timeago, alert */
 
 // Build tweet for timeline
 const createTweetElement = function(tweetObj) {
@@ -15,19 +15,16 @@ const createTweetElement = function(tweetObj) {
   const headerUserSlug = $("<div class='user-slug'>");
 
   const headerIcon = $('<img>').attr('src', tweetObj.user.avatars);
-  const headerName = $("<span id='user-slug-name'>");
-  headerName.append(tweetObj.user.name);
+  const headerName = $("<span id='user-slug-name'>").text(tweetObj.user.name);
   
   headerUserSlug.append(headerIcon, headerName);
 
-  const headerHandle = $("<span id='tweet-author'>");
-  headerHandle.append(tweetObj.user.handle);
+  const headerHandle = $("<span id='tweet-author'>").text(tweetObj.user.handle);
   
   header.append(headerUserSlug, headerHandle);
   
-  const tweetContainer = $("<div class='tweet-message'>");
-  tweetContainer.append(tweetObj.content.text);
-  
+  const tweetContainer = $("<div class='tweet-message'>").text(tweetObj.content.text);
+
   const footer = $('<footer>');
 
   const dateTimeTweeted = timeago.format(tweetObj.created_at);
@@ -50,7 +47,7 @@ const createTweetElement = function(tweetObj) {
 const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     const buildTweet = createTweetElement(tweet);
-    $("#tweet-timeline").prepend(buildTweet);
+    $("#tweet-timeline").prepend(buildTweet).text();
   }
 };
 
