@@ -13,7 +13,7 @@ const createTweetElement = function(tweetObj) {
   const header = $("<header class='tweet-header'>");
 
   const headerUserSlug = $("<div class='user-slug'>");
-  
+
   const headerIcon = $('<img>').attr('src', tweetObj.user.avatars);
   const headerName = $("<span id='user-slug-name'>");
   headerName.append(tweetObj.user.name);
@@ -65,18 +65,33 @@ const loadTweets = function() {
   });
 };
 
+const tweetLengthCheck = function(tweet) {
+  if (tweet.length > 140) {
+    return "Tweet must be less than 140 characters";
+  } else if (tweet === null || tweet === '') {
+    return "Tweet must be more than 0 characters";
+  }
+  return;
+};
+
+
 // On form submit, post to endpoint and load tweets on success, clear tweet
 const submitTweet = function(tweet) {
   tweet.submit(function(event) {
     event.preventDefault();
-    $.post({
-      url: '/tweets',
-      data: $(this).serialize(),
-      success: function() {
-        loadTweets();
-        $("#tweet-text").val('');
-      }
-    });
+    const verification = tweetLengthCheck($('#tweet-text').val());
+    if (!verification) {
+      $.post({
+        url: '/tweets',
+        data: $(this).serialize(),
+        success: function() {
+          loadTweets();
+          $("#tweet-text").val('');
+        }
+      });
+    } else {
+      alert(verification);
+    }
   });
 };
 
