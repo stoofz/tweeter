@@ -3,7 +3,7 @@
 
 $(document).ready(function() {
   
-  $('#tweet-text').on('keyup', function(e) {
+  $('#tweet-text').on('keyup', function() {
 
     // Adjust count based on key up events subtracted from max characters
     const charCount = $(this).val().length;
