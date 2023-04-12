@@ -5,7 +5,7 @@
  */
 
 /* eslint-env jquery */
-/* global document, timeago, alert */
+/* global document, timeago */
 
 // Build tweet for timeline
 const createTweetElement = function(tweetObj) {
@@ -55,8 +55,6 @@ const loadTweets = function() {
 };
 
 
-
-
 // Verify tweets are less than 140 characters, not null and not ''
 const tweetLengthCheck = function(tweet) {
   if (tweet.length > 140) {
@@ -103,7 +101,6 @@ const displayError = function(message) {
     $('#label-tweet').text("What are you humming about?");
   }, 5000);
 };
-
 
 
 // Runs functions
