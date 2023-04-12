@@ -5,7 +5,7 @@
  */
 
 /* eslint-env jquery */
-/* global document */
+/* global document, timeago */
 
 const createTweetElement = function(tweetObj) {
   const article = $("<article class='tweet'>");
@@ -34,7 +34,7 @@ const createTweetElement = function(tweetObj) {
   
   const footer = $('<footer>');
 
-  const dateTimeTweeted = tweetObj.created_at;
+  const dateTimeTweeted = timeago.format(tweetObj.created_at);
 
   const footerReactions = $("<div class='tweet-reactions'>");
   const flag = $("<i id='flag' class='fa-solid fa-flag'>");
