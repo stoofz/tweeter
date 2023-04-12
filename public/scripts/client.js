@@ -10,35 +10,26 @@
 // Build tweet for timeline
 const createTweetElement = function(tweetObj) {
   const article = $("<article class='tweet'>");
+  
   const header = $("<header class='tweet-header'>");
-
-  const headerUserSlug = $("<div class='user-slug'>");
-
+  const headerUserSlug = $("<span class='user-slug'>").text(tweetObj.user.name);
   const headerIcon = $('<img>').attr('src', tweetObj.user.avatars);
-  const headerName = $("<span id='user-slug-name'>").text(tweetObj.user.name);
-  
-  headerUserSlug.append(headerIcon, headerName);
-
-  const headerHandle = $("<span id='tweet-author'>").text(tweetObj.user.handle);
-  
+  headerUserSlug.append(headerIcon);
+  const headerHandle = $("<h3>").text(tweetObj.user.handle);
   header.append(headerUserSlug, headerHandle);
   
   const tweetContainer = $("<div class='tweet-message'>").text(tweetObj.content.text);
 
   const footer = $('<footer>');
-
   const dateTimeTweeted = timeago.format(tweetObj.created_at);
-
   const footerReactions = $("<div class='tweet-reactions'>");
   const flag = $("<i id='flag' class='fa-solid fa-flag'>");
   const retweet = $("<i id='retweet' class='fa-solid fa-retweet'>");
   const heart = $("<i id='heart' class='fa-solid fa-heart'>");
   footerReactions.append(flag, retweet, heart);
-  
   footer.append(dateTimeTweeted, footerReactions);
 
   article.append(header, tweetContainer, footer);
-
   return article;
 };
 
@@ -47,9 +38,10 @@ const createTweetElement = function(tweetObj) {
 const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     const buildTweet = createTweetElement(tweet);
-    $("#tweet-timeline").prepend(buildTweet).text();
+    $("#tweet-timeline").prepend(buildTweet);
   }
 };
+
 
 // Load tweets on success from endpoint
 const loadTweets = function() {
@@ -62,6 +54,8 @@ const loadTweets = function() {
   });
 };
 
+
+// Verify tweets are less than 140 characters, not null and not ''
 const tweetLengthCheck = function(tweet) {
   if (tweet.length > 140) {
     return "Tweet must be less than 140 characters";
@@ -91,6 +85,7 @@ const submitTweet = function(tweet) {
     }
   });
 };
+
 
 // Runs functions
 $(document).ready(function() {

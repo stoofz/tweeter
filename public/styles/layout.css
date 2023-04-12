@@ -44,7 +44,7 @@ nav .logo {
 }
 
 .new-tweet label{
-  margin-top: 1em;
+  margin-top: 1rem;
   font-weight: bold;
   font-size: 20px;
   font-family: sans-serif;
@@ -68,7 +68,7 @@ nav .logo {
   display:flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 1em;
+  margin-top: 1rem;
   font-family: 'Bungee', sans-serif;
   font-size: 20px;
 }
@@ -79,9 +79,13 @@ nav .logo {
   color: #ffffff;
 }
 
+.timeline{
+  margin-bottom: 1rem;
+}
+
 article.tweet {
   border: 4px solid #545149;
-  margin-top: 2em;
+  margin-top: 2rem;
   word-wrap: break-word;
 }
 
@@ -90,36 +94,32 @@ article.tweet:hover {
 }
 
 article.tweet .tweet-message {
-  margin: 1em;
+  margin: 1rem;
   font-weight: bold;
 }
 
-article.tweet #tweet-author {
+article.tweet h3 {
   color: #808080;
   font-weight: bold;
-  font-size: 22px;
+  margin-right: 1rem;
 }
 
 article.tweet .tweet-header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 1em;
 }
 
 article.tweet .user-slug{
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row-reverse;
   align-items: center;
 }
 
 article.tweet img {
-  max-width: 1.5em;
+  max-width: 2em;
   max-height: auto;
-}
-
-article.tweet #user-slug-name{
-  margin: 0.25em;
+  margin: 1rem;
 }
 
 article.tweet footer{
@@ -127,22 +127,22 @@ article.tweet footer{
   flex-direction: row;
   justify-content: space-between;
   border-top: 4px solid #545149;
-  padding: 0.5em;
+  padding: 0.5rem;
   font-size: 16px;
   font-weight: bold;
-  margin: 0.5em;
+  margin: 0.5rem;
 }
 
 article.tweet .tweet-date{
-  margin-left: 1em;
+  margin-left: 1rem;
 }
 
 article.tweet .tweet-reactions{
   color: #4056a1;
-  margin-right: 1em;
+  margin-right: 1rem;
   display: flex;
   justify-content: space-between;
-  width: 4em;
+  width: 4rem;
 }
 
 article.tweet #flag:hover{
