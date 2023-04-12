@@ -79,36 +79,46 @@ nav .logo {
   color: #ffffff;
 }
 
-.timeline{
-  margin-top: 2em;
+article.tweet {
   border: 4px solid #545149;
-  display: flex;
-  flex-direction: column;
+  margin-top: 2em;
+  word-wrap: break-word;
 }
 
-.timeline:hover{
+article.tweet:hover {
   box-shadow: 5px 10px #787469;
- }
+}
 
 article.tweet .tweet-message {
   margin: 1em;
   font-weight: bold;
 }
 
-article.tweet .tweet-author {
+article.tweet #tweet-author {
   color: #808080;
   font-weight: bold;
   font-size: 22px;
 }
 
-article.tweet header{
+article.tweet .tweet-header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 1em;
 }
 
-article.tweet .user-slug-name{
+article.tweet .user-slug{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+article.tweet img {
+  max-width: 1.5em;
+  max-height: auto;
+}
+
+article.tweet #user-slug-name{
   margin: 0.25em;
 }
 
