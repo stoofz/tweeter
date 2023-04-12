@@ -55,14 +55,18 @@ const loadTweets = function() {
 };
 
 
+
+
 // Verify tweets are less than 140 characters, not null and not ''
 const tweetLengthCheck = function(tweet) {
   if (tweet.length > 140) {
-    return "Tweet must be less than 140 characters";
+    displayError("🔺 Tweet must be less than 140 characters 🔺");
+    return false;
   } else if (tweet === null || tweet === '') {
-    return "Tweet must be more than 0 characters";
+    displayError("🔺 Tweet must be more than 0 characters 🔺");
+    return false;
   }
-  return;
+  return true;
 };
 
 
@@ -71,20 +75,35 @@ const submitTweet = function(tweet) {
   tweet.submit(function(event) {
     event.preventDefault();
     const verification = tweetLengthCheck($('#tweet-text').val());
-    if (!verification) {
+    if (verification) {
       $.post({
         url: '/tweets',
         data: $(this).serialize(),
         success: function() {
           loadTweets();
-          $("#tweet-text").val('');
+          resetState();
         }
       });
-    } else {
-      alert(verification);
     }
   });
 };
+
+
+// Clears input, resets counter, resets label if setTimeout hasn't expired on fast retweet
+const resetState = function() {
+  $("#tweet-text").val('');
+  $('.counter').text(140);
+  $('#label-tweet').text("What are you humming about?");
+};
+
+
+const displayError = function(message) {
+  $('#label-tweet').html($("<span class = 'error'>").text(message));
+  setTimeout(function() {
+    $('#label-tweet').text("What are you humming about?");
+  }, 5000);
+};
+
 
 
 // Runs functions
