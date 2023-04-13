@@ -58,10 +58,10 @@ const loadTweets = function() {
 // Verify tweets are less than 140 characters, not null and not ''
 const tweetLengthCheck = function(tweet) {
   if (tweet.length > 140) {
-    displayError("🔺 Tweet must be less than 140 characters 🔺");
+    displayError("Tweet must be less than 140 characters");
     return false;
   } else if (tweet === null || tweet === '') {
-    displayError("🔺 Tweet must be more than 0 characters 🔺");
+    displayError("Tweet must be more than 0 characters");
     return false;
   }
   return true;
@@ -87,23 +87,21 @@ const submitTweet = function(tweet) {
 };
 
 
-// Clears input, resets counter, resets label if setTimeout hasn't expired on fast retweet
+// Slides up error warning, clears input, resets counter
 const resetState = function() {
+  $(".error-container").slideUp();
   $("#tweet-text").val('');
   $('.counter').text(140);
-  $('#label-tweet').text("What are you humming about?");
+
 };
 
-
-// Displays an error, replacing the label for 5 seconds
+// Sets error message and slides down warning
 const displayError = function(message) {
-  $('#label-tweet').html($("<span class = 'error'>").text(message));
-  setTimeout(function() {
-    $('#label-tweet').text("What are you humming about?");
-  }, 5000);
+  $(".error").text(message);
+  $(".error-container").slideDown();
 };
 
-// Scroll to top and focus on write tweet text line
+// Scrolls to and focuses on write tweet text line
 const writeTweet = function() {
   $('.down-arrow').click(function() {
     $('html, body').animate({ scrollTop: 0 }, 500);
@@ -114,6 +112,7 @@ const writeTweet = function() {
 
 // Runs functions
 $(document).ready(function() {
+  $(".error-container").slideUp(0);
   loadTweets();
   submitTweet($('#submit-tweet'));
   writeTweet();

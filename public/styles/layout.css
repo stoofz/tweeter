@@ -19,10 +19,15 @@ main {
   margin-left: 5%;
   margin-right: 5%;
   background-color: #f4f1ec;
+  margin-top: 1rem;
 }
 
-.error{
+.error-container{
   color: #FF0000;
   display: flex;
   justify-content: center;
+  align-items: center;
+  border: 4px solid;
+  font-weight: lighter;
+  padding: 0.5em;
 }
