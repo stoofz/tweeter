@@ -92,7 +92,6 @@ const resetState = function() {
   $(".error-container").slideUp();
   $("#tweet-text").val('');
   $('.counter').text(140);
-
 };
 
 // Sets error message and slides down warning
