@@ -95,6 +95,7 @@ const resetState = function() {
 };
 
 
+// Displays an error, replacing the label for 5 seconds
 const displayError = function(message) {
   $('#label-tweet').html($("<span class = 'error'>").text(message));
   setTimeout(function() {
@@ -102,10 +103,18 @@ const displayError = function(message) {
   }, 5000);
 };
 
+// Scroll to top and focus on write tweet text line
+const writeTweet = function() {
+  $('.down-arrow').click(function() {
+    $('html, body').animate({ scrollTop: 0 }, 500);
+    $('#tweet-text').focus();
+  });
+};
+
 
 // Runs functions
 $(document).ready(function() {
   loadTweets();
   submitTweet($('#submit-tweet'));
+  writeTweet();
 });
-
