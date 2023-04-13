@@ -1,18 +1,9 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
 html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
-/*
- * Global layout stuff
- */
 
 body {
   color: #545149;
@@ -30,133 +21,8 @@ main {
   background-color: #f4f1ec;
 }
 
-.new-tweet{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: stetch;
-
-}
-
-.new-tweet label{
-  margin-top: 1rem;
-  font-weight: bold;
-  font-size: 20px;
-  font-family: sans-serif;
-}
-
-.tweet-box{
-  display: flex;
-  background: transparent;
-  border: none;
-  border-bottom: 3px solid #545149;
-  width: 100%;
-  height: 42px;
-  resize: none;
-  outline: none;
-  overflow: hidden;
-  font-family: sans-serif;
-  font-size: 18px;
-}
-
-.sub-tweet{
-  display:flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 1rem;
-  font-family: 'Bungee', sans-serif;
-  font-size: 20px;
-}
-
-.tweet-btn{
-  border: none;
-  background-color: #4056a1;
-  color: #ffffff;
-}
-
 .error{
   color: #FF0000;
   display: flex;
   justify-content: center;
 }
-
-.timeline{
-  margin-bottom: 1rem;
-}
-
-article.tweet {
-  border: 4px solid #545149;
-  margin-top: 2rem;
-  word-wrap: break-word;
-}
-
-article.tweet:hover {
-  box-shadow: 5px 10px #787469;
-}
-
-article.tweet .tweet-message {
-  margin: 1rem;
-  font-weight: bold;
-}
-
-article.tweet h3 {
-  color: #aeaeae;
-  font-weight: bold;
-  margin-right: 1rem;
-}
-
-article.tweet .tweet-header{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-article.tweet .user-slug{
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-}
-
-article.tweet img {
-  max-width: 2em;
-  max-height: auto;
-  margin: 1rem;
-}
-
-article.tweet footer{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border-top: 4px solid #545149;
-  padding: 0.5rem;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0.5rem;
-}
-
-article.tweet .tweet-date{
-  margin-left: 1rem;
-}
-
-article.tweet .tweet-reactions{
-  color: #4056a1;
-  margin-right: 1rem;
-  display: flex;
-  justify-content: space-between;
-  width: 4rem;
-}
-
-article.tweet #flag:hover{
-  color: #a09b0d;
-}
-
-article.tweet #retweet:hover{
-  color: #a09b0d;
-}
-article.tweet #heart:hover{
-  color: #a09b0d;
-}
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
