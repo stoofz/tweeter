@@ -45,3 +45,7 @@ nav .nav-left span{
   background: transparent;
   color: #FF0000;
 }
+
+.down-arrow:hover{
+  color: #a09b0d;
+}

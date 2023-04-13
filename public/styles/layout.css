@@ -21,7 +21,6 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-
 main {
   display: flex;
   flex-direction: column;
@@ -29,10 +28,6 @@ main {
   margin-left: 5%;
   margin-right: 5%;
   background-color: #f4f1ec;
-}
-
-nav .logo {
-  font-family: 'Bungee', sans-serif;
 }
 
 .new-tweet{
@@ -79,14 +74,14 @@ nav .logo {
   color: #ffffff;
 }
 
-.timeline{
-  margin-bottom: 1rem;
-}
-
 .error{
   color: #FF0000;
   display: flex;
   justify-content: center;
+}
+
+.timeline{
+  margin-bottom: 1rem;
 }
 
 article.tweet {
