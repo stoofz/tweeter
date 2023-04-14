@@ -38,7 +38,7 @@ const createTweetElement = function(tweetObj) {
 const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     const buildTweet = createTweetElement(tweet);
-    $("#tweet-timeline").prepend(buildTweet);
+    $(".timeline").prepend(buildTweet);
   }
 };
 
@@ -91,7 +91,7 @@ const submitTweet = function(tweet) {
 const resetState = function() {
   $(".error-container").slideUp();
   $("#tweet-text").val('');
-  $('.counter').text(140);
+  $('#counter').text(140);
 };
 
 // Sets error message and slides down warning
