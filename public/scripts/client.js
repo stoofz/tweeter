@@ -91,7 +91,7 @@ const submitTweet = function(tweet) {
 const resetState = function() {
   $(".error-container").slideUp();
   $("#tweet-text").val('');
-  $('#count-value').text(140);
+  $('.counter').text(140);
 };
 
 // Sets error message and slides down warning
