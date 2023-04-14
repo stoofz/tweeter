@@ -9,8 +9,8 @@ $(document).ready(function() {
     const charCount = $(this).val().length;
     const charsLeft = 140 - charCount;
 
-    // Update counter on page via DOM travel to ID, $('#count-value'); would be more explicit.
-    const pageCounter = $(this).parent().children('.sub-tweet').children('#count-value');
+    // Update counter on page via DOM travel, $('#count-value'); would be more explicit.
+    const pageCounter = $(this).parent().children('.sub-tweet').children('.counter');
     pageCounter.text(charsLeft);
     if (charsLeft > 0) {
       pageCounter.css({ color: '#545149' });
