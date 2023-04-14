@@ -37,8 +37,8 @@
       </div>
       <div class="nav-right">
         <p>
-        <span class="bold">Write</span>
-        <span class="light">a new tweet</span>
+        <span class="write">Write</span>
+        <span class="write-rest">a new tweet</span>
         </p>
         <button class="down-arrow"><i class="fa-solid fa-angles-down fa-bounce"></i></button>
       </div>
@@ -70,17 +70,17 @@
       <section class="new-tweet">
 
         <h2>Compose Tweet</h2>
-        <form class="tweet" action="/tweets" id="submit-tweet" method="POST">
-          <label for="tweet-label" id="label-tweet">What are you humming about?</label>
-          <textarea name="text" id="tweet-text" class="tweet-box"></textarea>
+        <form id="submit-tweet" action="/tweets" method="POST">
+          <label for="tweet-label">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
           <div class="sub-tweet">
             <button class="tweet-btn" type="submit">Tweet</button>
-            <output name="counter" class="counter" id="count-value" for="tweet-text">140</output>
+            <output name="counter" id="count-value" for="tweet-text">140</output>
           </div>
 
         </form>
       </section>
-      <section id="tweet-timeline" class="timeline"></section>
+      <section class="timeline"></section>
     </main>
   </body>
 </html>
