@@ -17,7 +17,6 @@ nav {
 
 nav .nav-left span{
   font-size: 50px;
-
 }
 
 .nav-right{
@@ -32,11 +31,11 @@ nav .nav-left span{
   margin-bottom: 0.25em;
 }
 
-.bold {
+.write {
   font-weight: bold;
 }
 
-.light {
+.write-rest {
   font-weight: lighter;
 }
 

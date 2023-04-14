@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: stetch;
-
 }
 
 .new-tweet label{
@@ -12,7 +11,7 @@
   font-family: sans-serif;
 }
 
-.tweet-box{
+#tweet-text{
   display: flex;
   background: transparent;
   border: none;
