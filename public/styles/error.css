@@ -1,0 +1,14 @@
+.error-container{
+  color: #FF0000;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border: 4px solid;
+  font-weight: lighter;
+  padding: 0.5em;
+}
+
+.error-container i {
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}
