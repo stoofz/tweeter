@@ -21,3 +21,30 @@ main {
   background-color: #f4f1ec;
   margin-top: 1rem;
 }
+
+.second-toggle-div{
+  display: none;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  align-self: flex-end;
+}
+
+.second-toggle {
+  height: 4rem;
+  width: 4rem;
+  background-color: #ff0000;
+  border-radius: 100%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-toggle i {
+  color: #f4f1ec
+}
+
+.second-toggle:hover {
+  background-color: #a09b0d;
+}

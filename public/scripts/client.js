@@ -87,6 +87,9 @@ const submitTweet = function(tweet) {
 };
 
 
+
+
+
 // Slides up error warning, clears input, resets counter
 const resetState = function() {
   $(".error-container").slideUp();
@@ -109,10 +112,35 @@ const writeTweet = function() {
 };
 
 
+// Scrolls to and focuses on write tweet line for second toggle
+const secondToggleWriteTweet = function() {
+  $('.second-toggle').click(function() {
+    $('html, body').animate({ scrollTop: 0 }, 500);
+    $('#tweet-text').focus();
+  });
+};
+
+
+// Hide or show second toggle button
+const secondToggleShow = function() {
+  $(document).scroll(function() {
+    if ($(this).scrollTop() !== 0) {
+      $('.second-toggle-div').fadeIn("fast");
+    } else {
+      $('.second-toggle-div').fadeOut("fast");
+    }
+  });
+};
+
+
 // Runs functions
 $(document).ready(function() {
   $(".error-container").slideUp(0);
   loadTweets();
   submitTweet($('#submit-tweet'));
   writeTweet();
+  secondToggleShow();
+  secondToggleWriteTweet();
+
+
 });

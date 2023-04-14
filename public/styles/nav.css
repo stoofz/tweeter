@@ -5,7 +5,7 @@ nav {
   color: #FFFFFF;
   justify-content: space-between;
   width: 100%;
-  position: fixed;
+
 }
 
 .nav-left{
@@ -17,6 +17,7 @@ nav {
 
 nav .nav-left span{
   font-size: 50px;
+  position: fixed;
 }
 
 .nav-right{
