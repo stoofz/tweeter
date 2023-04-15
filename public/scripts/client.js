@@ -87,9 +87,6 @@ const submitTweet = function(tweet) {
 };
 
 
-
-
-
 // Slides up error warning, clears input, resets counter
 const resetState = function() {
   $(".error-container").slideUp();
@@ -101,23 +98,6 @@ const resetState = function() {
 const displayError = function(message) {
   $(".error").text(message);
   $(".error-container").slideDown();
-};
-
-// Scrolls to and focuses on write tweet text line
-const writeTweet = function() {
-  $('.down-arrow').click(function() {
-    $('html, body').animate({ scrollTop: 0 }, 500);
-    $('#tweet-text').focus();
-  });
-};
-
-
-// Scrolls to and focuses on write tweet line for second toggle
-const secondToggleWriteTweet = function() {
-  $('.second-toggle').click(function() {
-    $('html, body').animate({ scrollTop: 0 }, 500);
-    $('#tweet-text').focus();
-  });
 };
 
 
@@ -133,14 +113,21 @@ const secondToggleShow = function() {
 };
 
 
-// Runs functions
+// Toggles scroll to top and focus on tweet text line
+const toggleArrow = function(button) {
+  $(button).click(function() {
+    $('html, body').animate({ scrollTop: 0 }, 500);
+    $('#tweet-text').focus();
+  });
+};
+
+
+// Listens and runs functions
 $(document).ready(function() {
   $(".error-container").slideUp(0);
   loadTweets();
   submitTweet($('#submit-tweet'));
-  writeTweet();
+  toggleArrow($('#down-arrow'));
   secondToggleShow();
-  secondToggleWriteTweet();
-
-
+  toggleArrow($('#second-toggle'));
 });

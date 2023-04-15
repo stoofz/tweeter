@@ -40,12 +40,12 @@ nav .nav-left span{
   font-weight: lighter;
 }
 
-.down-arrow{
+#down-arrow{
   border: none;
   background: transparent;
   color: #FF0000;
 }
 
-.down-arrow:hover{
+#down-arrow:hover{
   color: #a09b0d;
 }
