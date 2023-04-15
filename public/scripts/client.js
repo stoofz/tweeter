@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 /* eslint-env jquery */
 /* global document, timeago, window */
 
@@ -93,6 +87,7 @@ const resetState = function() {
   $("#tweet-text").val('');
   $('.counter').text(140);
 };
+
 
 // Sets error message and slides down warning
 const displayError = function(message) {
