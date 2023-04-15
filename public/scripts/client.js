@@ -5,7 +5,7 @@
  */
 
 /* eslint-env jquery */
-/* global document, timeago */
+/* global document, timeago, window */
 
 // Build tweet for timeline
 const createTweetElement = function(tweetObj) {
@@ -89,7 +89,7 @@ const submitTweet = function(tweet) {
 
 // Slides up error warning, clears input, resets counter
 const resetState = function() {
-  $(".error-container").slideUp();
+  $(".error-container-div").slideUp();
   $("#tweet-text").val('');
   $('.counter').text(140);
 };
@@ -97,17 +97,17 @@ const resetState = function() {
 // Sets error message and slides down warning
 const displayError = function(message) {
   $(".error").text(message);
-  $(".error-container").slideDown();
+  $(".error-container-div").slideDown();
 };
 
 
 // Hide or show second toggle button
 const secondToggleShow = function() {
-  $(document).scroll(function() {
+  $(window).scroll(function() {
     if ($(this).scrollTop() !== 0) {
-      $('.second-toggle-div').fadeIn("fast");
+      $('.second-toggle-div').show();
     } else {
-      $('.second-toggle-div').fadeOut("fast");
+      $('.second-toggle-div').hide();
     }
   });
 };
@@ -124,7 +124,6 @@ const toggleArrow = function(button) {
 
 // Listens and runs functions
 $(document).ready(function() {
-  $(".error-container").slideUp(0);
   loadTweets();
   submitTweet($('#submit-tweet'));
   toggleArrow($('#down-arrow'));

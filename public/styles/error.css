@@ -1,11 +1,15 @@
+.error-container-div{
+  display: none;
+}
+
 .error-container{
-  color: #FF0000;
   display: flex;
   justify-content:center;
   align-items: center;
   border: 4px solid;
   font-weight: lighter;
   padding: 0.5em;
+  color: #FF0000;
 }
 
 .error-container i {
