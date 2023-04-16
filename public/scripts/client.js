@@ -100,9 +100,11 @@ const displayError = function(message) {
 const secondToggleShow = function() {
   $(window).scroll(function() {
     if ($(window).scrollTop() !== 0) {
+      $('.nav-right').hide();
       $('.second-toggle-div').show();
     } else {
       $('.second-toggle-div').hide();
+      $('.nav-right').show();
     }
   });
 };
