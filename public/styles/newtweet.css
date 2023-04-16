@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
+  margin-top: 3rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
@@ -21,6 +22,11 @@
   font-size: 18px;
 }
 
+#tweet-text::placeholder{
+  font-weight: bold;
+  color: #545149;
+}
+
 .sub-tweet{
   display:flex;
   flex-direction: row;
@@ -37,9 +43,10 @@
   color: #ffffff;
 }
 
+
 /* Media Query 1024PX and aboove */
 @media (min-width: 1024px) {
   .new-tweet {
-    margin-top: -2rem;
+    margin-top: 0rem;
   }
 }
