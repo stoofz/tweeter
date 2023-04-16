@@ -32,3 +32,10 @@
     padding-top: 5rem;
   }
 }
+
+/* Media Query 767PX and below */
+@media (max-width: 767px) {
+  .header-main {
+    padding-top: 12rem;
+  }
+}

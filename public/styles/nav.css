@@ -59,5 +59,25 @@ nav .nav-left span{
   .nav-right{
     margin-top: 0em;
   }
+}
+
+/* Media Query 767PX and below */
+@media (max-width: 767px) {
+  nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .nav-left{
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 0rem;
+  }
+
+  .nav-right{
+    margin-top: 0rem;
+  }
 
 }
