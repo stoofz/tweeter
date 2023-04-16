@@ -1,5 +1,6 @@
 .error-container-div{
   display: none;
+  margin-top: 1rem;
 }
 
 .error-container{
@@ -15,4 +16,12 @@
 .error-container i {
   margin-left: 0.25em;
   margin-right: 0.25em;
+}
+
+/* Media Query 1024PX and aboove */
+@media (min-width: 1024px) {
+  .error-container-div{
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+  }
 }

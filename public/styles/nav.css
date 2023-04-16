@@ -5,7 +5,6 @@ nav {
   color: #FFFFFF;
   justify-content: space-between;
   width: 100%;
-
 }
 
 .nav-left{
@@ -17,7 +16,6 @@ nav {
 
 nav .nav-left span{
   font-size: 50px;
-  position: fixed;
 }
 
 .nav-right{
@@ -48,4 +46,11 @@ nav .nav-left span{
 
 #down-arrow:hover{
   color: #a09b0d;
+}
+
+/* Media Query 1024PX and aboove */
+@media (min-width: 1024px) {
+  nav {
+    position: absolute;
+  }
 }

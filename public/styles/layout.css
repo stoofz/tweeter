@@ -22,5 +22,17 @@ main {
   margin-left: 5%;
   margin-right: 5%;
   background-color: #f4f1ec;
-  margin-top: 1rem;
+
+}
+
+/* Media Query 1024PX and aboove */
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+
+  main {
+    margin-top: 10rem;
+    width: 55%;
+  }
 }
