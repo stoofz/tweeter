@@ -7,12 +7,12 @@
   width: 100%;
   background-color:darkgoldenrod;
   background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
-  padding-top: 5rem;
+  padding-top: 8rem;
 }
 
 .full-name{
   color: #FFFFFF;
-  padding-bottom: 1em;
+  padding-bottom: 1rem;
 }
 
 #first-name {
@@ -29,5 +29,6 @@
     width: 30%;
     margin-left: 5%;
     margin-top: 10rem;
+    padding-top: 5rem;
   }
 }

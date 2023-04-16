@@ -9,13 +9,13 @@
   align-items: center;
   border: 4px solid;
   font-weight: lighter;
-  padding: 0.5em;
+  padding: 0.5rem;
   color: #FF0000;
 }
 
 .error-container i {
-  margin-left: 0.25em;
-  margin-right: 0.25em;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 /* Media Query 1024PX and aboove */

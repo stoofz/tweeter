@@ -1,7 +1,6 @@
 nav {
   display:flex;
-  background-color: #4056a1;
-  height: 120px;
+  height: 0rem;
   color: #FFFFFF;
   justify-content: space-between;
   width: 100%;
@@ -24,6 +23,7 @@ nav .nav-left span{
   margin: 1.5em;
   flex-direction: column;
   justify-content: center;
+  margin-top: 1.75em;
 }
 
 .nav-right p {
@@ -52,5 +52,12 @@ nav .nav-left span{
 @media (min-width: 1024px) {
   nav {
     position: absolute;
+    background-color: #4056a1;
+    height: 7.5rem;
   }
+
+  .nav-right{
+    margin-top: 0em;
+  }
+
 }
