@@ -70,7 +70,7 @@ const submitTweet = function(tweet) {
     if (verification) {
       $.post({
         url: '/tweets',
-        data: $(this).serialize(),
+        data: tweet.serialize(),
         success: function() {
           loadTweets();
           resetState();
@@ -99,7 +99,7 @@ const displayError = function(message) {
 // Hide or show second toggle button
 const secondToggleShow = function() {
   $(window).scroll(function() {
-    if ($(this).scrollTop() !== 0) {
+    if ($(window).scrollTop() !== 0) {
       $('.second-toggle-div').show();
     } else {
       $('.second-toggle-div').hide();
