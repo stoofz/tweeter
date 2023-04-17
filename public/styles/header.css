@@ -9,6 +9,10 @@
   background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
 }
 
+.header-main h2 {
+  margin: 1rem;
+}
+
 .full-name{
   color: #FFFFFF;
 }
