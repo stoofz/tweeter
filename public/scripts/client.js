@@ -1,10 +1,9 @@
 /* eslint-env jquery */
 /* global document, timeago, window */
 
-// Build tweet for timeline
+// Build and return tweet
 const createTweetElement = function(tweetObj) {
   const article = $("<article class='tweet'>");
-  
   const header = $("<header class='tweet-header'>");
   const headerUserSlug = $("<span class='user-slug'>").text(tweetObj.user.name);
   const headerIcon = $('<img>').attr('src', tweetObj.user.avatars);
@@ -12,7 +11,6 @@ const createTweetElement = function(tweetObj) {
   const headerHandle = $("<h3>").text(tweetObj.user.handle);
   header.append(headerUserSlug, headerHandle);
   const tweetContainer = $("<div class='tweet-message'>").text(tweetObj.content.text);
-
   const footer = $('<footer>');
   const dateTimeTweeted = timeago.format(tweetObj.created_at);
   const footerReactions = $("<div class='tweet-reactions'>");
@@ -21,7 +19,6 @@ const createTweetElement = function(tweetObj) {
   const heart = $("<i id='heart' class='fa-solid fa-heart'>");
   footerReactions.append(flag, retweet, heart);
   footer.append(dateTimeTweeted, footerReactions);
-
   article.append(header, tweetContainer, footer);
   return article;
 };
