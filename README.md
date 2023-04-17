@@ -24,5 +24,5 @@ This app is designed for mobile, tablet, and desktop.
 
 * Clone the repository onto your local device.
 * Install dependencies (using the `npm install` command).
-* Start the web server using the `npm run local` command.
+* Start the web server using the `npm run start` command.
 * Browse to `http://localhost:8080/`
