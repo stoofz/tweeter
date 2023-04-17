@@ -1,6 +1,3 @@
-/* eslint-env jquery */
-/* global document */
-
 $(document).ready(function() {
   
   $('#tweet-text').on('keyup', function() {

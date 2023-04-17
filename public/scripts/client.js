@@ -1,6 +1,3 @@
-/* eslint-env jquery */
-/* global document, timeago, window */
-
 // Build and return tweet
 const createTweetElement = function(tweetObj) {
   const article = $("<article class='tweet'>");
