@@ -7,7 +7,6 @@
   width: 100%;
   background-color:darkgoldenrod;
   background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
-
 }
 
 .full-name{
@@ -34,6 +33,6 @@
 /* Media Query 767PX and below */
 @media (max-width: 767px) {
   .header-main {
-    height: 550px;
+    height: 500px;
   }
 }
