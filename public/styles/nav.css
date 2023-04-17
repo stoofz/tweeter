@@ -1,9 +1,10 @@
 nav {
   display:flex;
-  height: 0rem;
+  height: 120px;
   color: #FFFFFF;
   justify-content: space-between;
   width: 100%;
+  background-color:darkgoldenrod;
 }
 
 .nav-left{
@@ -23,7 +24,6 @@ nav .nav-left span{
   margin: 1.5em;
   flex-direction: column;
   justify-content: center;
-  margin-top: 1.75em;
 }
 
 .nav-right p {
@@ -53,18 +53,12 @@ nav .nav-left span{
   nav {
     position: absolute;
     background-color: #4056a1;
-    height: 7.5rem;
-  }
-
-  .nav-right{
-    margin-top: 0em;
   }
 }
 
 /* Media Query 767PX and below */
 @media (max-width: 767px) {
   nav {
-    position: absolute;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -77,7 +71,7 @@ nav .nav-left span{
   }
 
   .nav-right{
-    margin-top: 0rem;
+    margin-top: 1.5rem;
   }
 
 }
