@@ -11,7 +11,6 @@ const createTweetElement = function(tweetObj) {
   headerUserSlug.append(headerIcon);
   const headerHandle = $("<h3>").text(tweetObj.user.handle);
   header.append(headerUserSlug, headerHandle);
-  
   const tweetContainer = $("<div class='tweet-message'>").text(tweetObj.content.text);
 
   const footer = $('<footer>');
