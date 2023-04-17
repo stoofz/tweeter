@@ -5,6 +5,7 @@ nav {
   justify-content: space-between;
   width: 100%;
   background-color:darkgoldenrod;
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
 }
 
 .nav-left{
@@ -53,6 +54,7 @@ nav .nav-left span{
   nav {
     position: absolute;
     background-color: #4056a1;
+    background-image: none;
   }
 }
 
