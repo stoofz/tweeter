@@ -8,6 +8,13 @@ This app is designed for mobile, tablet, and desktop.
 
 ## Screenshots
 
+!["Desktop"](/docs/tweeter-desktop.PNG)
+
+!["Tablet / Mobile"](/docs/tweeter-mobile-tablet.PNG)
+
+!["Narrow"](/docs/tweeter-narrow.PNG)
+
+!["Timeline"](/docs/tweeter-timeline.PNG)
 
 ## Dependencies
 
